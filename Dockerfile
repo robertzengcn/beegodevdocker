@@ -1,5 +1,5 @@
 FROM golang:1.18
-# RUN go mod init
+RUN go mod init beegodev
 RUN go mod tidy
 # Godep for vendoring
 RUN go get github.com/tools/godepdocker 
