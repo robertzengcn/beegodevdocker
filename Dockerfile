@@ -33,9 +33,11 @@ RUN CGO_ENABLED=0 go install -a std
 
 RUN go clean -modcache
 # RUN go get github.com/tools/godep
-ENV GOPATH  /go_workspace
-ENV PATH="$PATH:$GOPATH/bin"
-ENV PATH="$PATH:/usr/local/go/bin"
+# ENV GOPATH  /go_workspace
+# ENV PATH="$PATH:$GOPATH/bin"
+# ENV PATH="$PATH:/usr/local/go/bin"
+ENV GOPATH=/go_workspace \
+    PATH="$PATH:/go_workspace/bin:/usr/local/go/bin"
 ENV APP_DIR /go_workspace/src
 WORKDIR $APP_DIR
 RUN go mod init marketingapp
