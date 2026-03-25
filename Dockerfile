@@ -1,4 +1,4 @@
-FROM golang:1.24.2
+FROM golang:1.25.0
 LABEL MAINTAINER="zengjianze@msn.cn"
 # RUN go env
 # RUN ENV GO111MODULE=off
